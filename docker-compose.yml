@@ -1,0 +1,28 @@
+services:
+  web:
+    build: .
+    container_name: lamesa_web
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    volumes:
+      - ./:/var/www/html
+
+  db:
+    image: mariadb:11
+    container_name: lamesa_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: restaurante
+      MYSQL_USER: restaurante_user
+      MYSQL_PASSWORD: restaurante_pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
