@@ -251,6 +251,7 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <a href="#" class="btn btn-filtro">Jaime</a>
        <a href="#" class="btn btn-filtro">Cerna</a>
 	<a href="#" class="btn btn-filtro">Campos</a>
+ <a href="#" class="btn btn-filtro">Ramirez</a>
     </div>
 
     <table>
