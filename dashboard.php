@@ -250,6 +250,7 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <a href="dashboard.php?filtro=inactivos" class="btn btn-filtro <?= $filtro === 'inactivos' ? 'activo' : '' ?>">Inactivos</a>
         <a href="#" class="btn btn-filtro">Jaime</a>
        <a href="#" class="btn btn-filtro">Cerna</a>
+	<a href="#" class="btn btn-filtro">Campos</a>
     </div>
 
     <table>
